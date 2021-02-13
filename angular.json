@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "rxjs-workshop-angular"
+    }
+  },
+  "defaultProject": "rxjs-workshop-angular",
+  "cli": {
+    "analytics": false
+  }
 }
