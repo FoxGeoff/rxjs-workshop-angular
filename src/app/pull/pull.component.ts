@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { from, Observable } from 'rxjs';
+import { EMPTY, from, Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { BeerService } from '../beer/beer.service';
 import { Beer } from '../interface/beer';
 
@@ -10,15 +11,18 @@ import { Beer } from '../interface/beer';
 })
 export class PullComponent implements OnInit {
 
+  beers$: Observable<Beer[]>;
+  errorMessage = '';
+
   constructor(private beerService: BeerService) { }
 
   ngOnInit(): void {
-
-  }
-
-  getBeers(): Observable<Beer[]> {
-
-    return from([...beers]);
+    this.beerService.getBeers()
+      .subscribe(
+        (data: any[]) => console.log(data),
+        (err: any) => console.log(err),
+        () => console.log(`Done!`)
+      );
   }
 
 }
