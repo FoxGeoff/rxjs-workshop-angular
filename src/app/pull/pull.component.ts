@@ -11,6 +11,7 @@ import { Beer } from '../interface/beer';
 })
 export class PullComponent implements OnInit {
 
+  beers: Beer[];
   beers$: Observable<Beer[]>;
   errorMessage = '';
 
@@ -19,7 +20,10 @@ export class PullComponent implements OnInit {
   ngOnInit(): void {
     this.beerService.getBeers()
       .subscribe(
-        (data: any[]) => console.log(data),
+        (data: Beer[]) => {
+          this.beers = data;
+          console.log(data)
+        },
         (err: any) => console.log(err),
         () => console.log(`Done!`)
       );
