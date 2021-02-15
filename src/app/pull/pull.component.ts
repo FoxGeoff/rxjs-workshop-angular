@@ -22,7 +22,7 @@ export class PullComponent implements OnInit {
       .subscribe(
         (data: Beer[]) => {
           this.beers = data;
-          console.log(data)
+          console.log(data);
         },
         (err: any) => console.log(err),
         () => console.log(`Done!`)
