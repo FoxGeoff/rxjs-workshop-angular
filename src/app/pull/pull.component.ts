@@ -17,8 +17,8 @@ export class PullComponent implements OnInit {
   }
 
   getBeers(): Observable<Beer[]> {
-     
-    return from([...beers ]);
+
+    return from([...beers]);
   }
 
 }
