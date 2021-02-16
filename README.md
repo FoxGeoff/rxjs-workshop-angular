@@ -6,3 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. github/apm-rxjs-start
 2. github/rxjs-workshop
+
+### Task: Pull component
+
+### Task: FailoverCatch component

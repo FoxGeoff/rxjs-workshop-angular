@@ -7,11 +7,13 @@ import { PullComponent } from './pull/pull.component';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppData } from './app-data';
+import { FailoverCatchComponent } from './failover-catch/failover-catch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PullComponent
+    PullComponent,
+    FailoverCatchComponent
   ],
   imports: [
     BrowserModule,
